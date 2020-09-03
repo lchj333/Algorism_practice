@@ -1,7 +1,7 @@
 package webTest;
 
 public class Sum_TwoNums {
-	//µÎ Á¤¼öÀÇ ÇÕ ex)3~5 = 12
+	//ÂµÃ ÃÂ¤Â¼Ã¶Ã€Ã‡ Ã‡Ã• ex)3~5 = 12
 	public long solution(int a, int b) {
 		long answer = 0;
         if(a-b<0) for(int i=a; i<=b; i++) answer+=i;
@@ -14,3 +14,4 @@ public class Sum_TwoNums {
 		System.out.println(s.solution(5, 3));
 	}
 }
+
