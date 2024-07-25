@@ -1,4 +1,4 @@
-package test;
+package practice.algorism.programmers.lv1;
 
 import java.util.Arrays;
 
