@@ -1,4 +1,4 @@
-package test;
+package practice.algorism.programmers.lv1;
 
 import java.util.HashMap;
 
@@ -29,7 +29,9 @@ public class ProximateWord {
     }
 }
 /*
-    가장 가까운 같은 글자 - https://school.programmers.co.kr/learn/courses/30/lessons/142086
+가장 가까운 같은 글자
+https://school.programmers.co.kr/learn/courses/30/lessons/142086
+
     문제 설명
     문자열 s가 주어졌을 때, s의 각 위치마다 자신보다 앞에 나왔으면서, 자신과 가장 가까운 곳에 있는 같은 글자가 어디 있는지 알고 싶습니다.
         예를 들어, s="banana"라고 할 때,  각 글자들을 왼쪽부터 오른쪽으로 읽어 나가면서 다음과 같이 진행할 수 있습니다.
