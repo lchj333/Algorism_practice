@@ -1,4 +1,4 @@
-package test;
+package practice.algorism.programmers.lv1;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -68,6 +68,8 @@ public class KindsOfKind {
 
 /*
 성격 유형 검사하기
+https://school.programmers.co.kr/learn/courses/30/lessons/118666
+
 문제 설명
 나만의 카카오 성격 유형 검사지를 만들려고 합니다.
 성격 유형 검사는 다음과 같은 4개 지표로 성격 유형을 구분합니다. 성격은 각 지표에서 두 유형 중 하나로 결정됩니다.
