@@ -1,4 +1,4 @@
-package test;
+package practice.algorism.programmers.lv1;
 
 import java.util.Arrays;
 
@@ -50,6 +50,8 @@ public class GymSuit {
 
 /*
 체육복 - https://school.programmers.co.kr/learn/courses/30/lessons/42862
+탐욕법 알고리즘
+
     문제 설명
         점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다.
         학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다.
