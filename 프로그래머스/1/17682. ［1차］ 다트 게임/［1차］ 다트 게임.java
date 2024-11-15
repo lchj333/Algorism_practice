@@ -16,7 +16,6 @@ class Solution {
                 }else {
                     nowScore = Integer.parseInt(""+ dart[i]);
                 }
-                System.out.print("score : " + nowScore);
 
             } else {
                 // 제곱 체크
@@ -34,7 +33,6 @@ class Solution {
                     temp *= nowScore;
                 }
                 nowScore = temp;
-                System.out.print(", now : " + nowScore + ", ");
 
                 // 옵션 체크
                 if(i < dart.length) {
@@ -54,12 +52,10 @@ class Solution {
                     
                     answer += prevScore + nowScore;
                     prevScore = nowScore;
-                    System.out.println("answer : " + answer);
 
                 }else { // 옵션 무조건 없음
                     // 점수 합산 normal
                     answer += nowScore;
-                    System.out.println("answer : " + answer);
                 } // if end (option check)
 
             } // if end (char check)
