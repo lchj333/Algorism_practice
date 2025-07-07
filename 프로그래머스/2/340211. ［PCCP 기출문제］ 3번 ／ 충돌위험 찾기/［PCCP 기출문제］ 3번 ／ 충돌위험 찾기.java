@@ -1,7 +1,6 @@
 import java.util.*;
 
 class Solution {
-    
     private Set<String> footPrintSet = new HashSet<>();     // 로봇들의 모든 경로
     private Set<String> brokenCheckSet = new HashSet<>();   // 충돌 포인트
     
@@ -43,8 +42,6 @@ class Solution {
             time++;
         }
         
-        // System.out.println("footPrintSet " + footPrintSet);
-        // System.out.println("brokenCheckSet " + brokenCheckSet);
         return brokenCheckSet.size();
     }
                       
@@ -77,10 +74,10 @@ class Robot {
     public int[] moveToFinish() { // 이동 시뮬레이션
         int[] finish = finishList.get(finishIdx);
         // 무조건 Y좌표 우선 이동이였어...
-        if(now[0] != finish[0]) {
-            moveToY(finish);
-        }else {
-            moveToX(finish);
+        if(now[0] != finish[0]) {   // Y 이동
+            now[0] += finish[0] > now[0] ? 1 : -1;
+        }else {                     // X 이동
+            now[1] += finish[1] > now[1] ? 1 : -1;
         }
         
         // 목적지 재설정
@@ -90,21 +87,4 @@ class Robot {
 
         return now;
     }
-    
-    private void moveToY(int[] finish) {
-        if(finish[0] > now[0]) {
-            now[0] += 1;
-        }else if(finish[0] < now[0]) {
-            now[0] -= 1;
-        }
-    }
-    
-    private void moveToX(int[] finish) {
-        if(finish[1] > now[1]) {
-            now[1] += 1;
-        }else if(finish[1] < now[1]) {
-            now[1] -= 1;
-        }
-    }
-
 }
