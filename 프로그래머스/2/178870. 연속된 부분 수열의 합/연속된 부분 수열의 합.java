@@ -10,25 +10,26 @@ class Solution {
             // System.out.printf("[%d ~ %d] => %d\n", startIdx, endIdx, sum);
             if(k < sum) {
                 if(startIdx < sequence.length - 1) {
-                    sum -= sequence[startIdx++];
+                    sum -= sequence[startIdx++]; // 크면 시작인덱스 증가
                 }else {
                     break;
                 }
             }else if(k > sum) {
                 if(endIdx < sequence.length - 1) {
-                    sum += sequence[++endIdx];
+                    sum += sequence[++endIdx]; // 작으면 마지막인덱스 증가
                 }else {
-                    break;
+                    break; // 의미없는 반복 EXIT
                 }
             }else {
                 if(answer == null) {
                     answer = new int[] {startIdx, endIdx};
                 }else if((endIdx - startIdx) < (answer[1] - answer[0])) {
+                    // 길이가 더 짧은 수열로 갱신
                     answer[0] = startIdx;
                     answer[1] = endIdx;
                 }
                 // System.out.printf("%d == %d, answer = {%d, %d}\n", sum, k, startIdx, endIdx);
-                sum -= sequence[startIdx++];
+                sum -= sequence[startIdx++]; // 다음 정답 찾기위해 시작인덱스 증가
             }
                 
         } while(startIdx < sequence.length);
