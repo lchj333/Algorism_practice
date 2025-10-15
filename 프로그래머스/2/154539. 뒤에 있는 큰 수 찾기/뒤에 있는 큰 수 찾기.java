@@ -30,7 +30,7 @@ class Solution {
                     answer[answerIdx--] = -1;
                 }
             }
-            
+
             stack.push(numbers[numsIdx]);
         }
         
