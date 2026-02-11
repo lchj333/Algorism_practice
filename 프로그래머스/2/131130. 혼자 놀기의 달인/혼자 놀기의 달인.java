@@ -41,7 +41,7 @@ class Solution {
         int card = cards[boxIndex];
         
         // 중복 카드 체크
-        if(isDuplicatedCard(cards[boxIndex])) return;
+        if(isDuplicatedCard(card)) return;
         
         // 그룹 추가
         group.add(card);
