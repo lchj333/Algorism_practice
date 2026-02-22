@@ -18,22 +18,19 @@ class Solution {
         int i = 0;
         while(i < discount.length + totalWantNumber - DISCOUNT_DAYS) {
             if(i >= DISCOUNT_DAYS) { // 현재 10개 이상 탐색 구간
-                // 아이템 반환
-                Integer oldOneNumber = wantMap.get(discount[i - 10]);
-                if(oldOneNumber != null) {
-                    wantMap.put(discount[i - 10], ++oldOneNumber);
+                // 오래된 아이템 반환
+                if(wantMap.containsKey(discount[i - 10])) {
+                    wantMap.put(discount[i - 10], wantMap.get(discount[i - 10]) + 1);
                     haveWantNumber--;
                 }
-                // 아이템 가져가기
-                Integer newOneNumber = wantMap.get(discount[i]);
-                if(newOneNumber != null) {
-                    wantMap.put(discount[i], --newOneNumber);
+                // 새 아이템 가져가기
+                if(wantMap.containsKey(discount[i])) {
+                    wantMap.put(discount[i], wantMap.get(discount[i]) - 1);
                     haveWantNumber++;
                 }
-            }else { // 현재 10개 미만 탐색 시
-                Integer wantNumber = wantMap.get(discount[i]);
-                if(wantNumber != null) {
-                    wantMap.put(discount[i], --wantNumber);
+            }else { // 현재 10개 미만 탐색 시 일단 가져가기
+                if(wantMap.containsKey(discount[i])) {
+                    wantMap.put(discount[i], wantMap.get(discount[i]) - 1);
                     haveWantNumber++;
                 }
             }
